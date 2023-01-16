@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<%- include ('../navigationBar/navbarUser')%>
+<div class="main-product-thumbnail ptb-100 ptb-sm-60">
+    <div class="container">
+        <div class="thumb-bg">
+            <div class="row">
+                <!-- Main Thumbnail Image Start -->
+                <div class="col-lg-5 mb-all-40">
+                    <!-- Thumbnail Large Image start -->
+                    <div class="tab-content">
+                        <div id="thumb1" class="tab-pane fade show active">
+                            <a data-fancybox="images" href="/image/<%=blog.image%>"><img class="img-thumbnail"
+                                                                                         src="/image/<%=blog.image%>" alt="product-view"></a>
+                        </div>
+
+                    </div>
+                    <!-- Thumbnail Large Image End -->
+                </div>
+                <!-- Main Thumbnail Image End -->
+                <!-- Thumbnail Description Start -->
+                <div class="col-lg-7">
+                    <div class="thubnail-desc fix">
+                        <h3 class="product-header">
+                            <%= blog.title%>
+                        </h3>
+                        <div class="rating-summary fix mtb-10">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                        <div class="pro-price mtb-30">
+                            <p class="d-flex align-items-center"><span class="prev-price"></span><span
+                                        class="price"><%= blog.content%></span></p>
+                        </div>
+                        <div class="pro-price mtb-30">
+                            <p class="d-flex align-items-center"><span class="prev-price"></span><span
+                                        class="price"><%= blog.date.toLocaleTimeString()%></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thumbnail Description End -->
+
+            </div>
+            <!-- Row End -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+</div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
